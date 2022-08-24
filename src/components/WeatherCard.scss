@@ -1,0 +1,52 @@
+
+.dayCardContainer {
+  border: 1px solid #bfb391;
+  min-width: 200px;
+  margin: 0.6rem;
+  padding: 1rem;
+  background-color: rgba(214, 210, 199, 0.5);
+  border-radius: 10px;
+
+  .cardTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #ada692;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .cardIcon {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3273a8;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ada692;
+
+    @keyframes enlargeIcon {
+      from { font-size: 2.5rem; }
+      to { font-size: 2.7rem; }
+    }
+
+    &:hover {
+      animation-name: enlargeIcon;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .cardDescription {
+    display: flex;
+    flex-direction: column;
+
+    span:first-child {
+      margin-bottom: 0.5rem;
+      align-self: center;
+    }
+  }
+}
+
+.hourCardContainer {
+  @extend .dayCardContainer;
+  min-width: 150px;
+  margin-right: 2rem;
+}
